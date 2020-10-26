@@ -1,0 +1,7 @@
+project/Listings
+project/Objects
+*.o
+*.uvgui.*
+*.crf
+*.bin
+*.d
