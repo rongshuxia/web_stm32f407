@@ -270,7 +270,7 @@ rt_err_t sst25vfxx_init(const char * flash_device_name, const char * spi_device_
         struct rt_spi_configuration cfg;
         cfg.data_width = 8;
         cfg.mode = RT_SPI_MODE_0 | RT_SPI_MSB; /* SPI Compatible: Mode 0 and Mode 3 */
-        cfg.max_hz = 50000000; /* 50M */
+        cfg.max_hz = 1000000;//50000000; /* 50M */
         rt_spi_configure(spi_flash->rt_spi_device, &cfg);
     }
 
@@ -356,3 +356,5 @@ rt_err_t sst25vfxx_init(const char * flash_device_name, const char * spi_device_
 
     return RT_EOK;
 }
+
+

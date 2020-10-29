@@ -82,13 +82,13 @@
 
 /* Device virtual file system */
 
-//#define RT_USING_DFS
-//#define DFS_USING_WORKDIR
-//#define DFS_FILESYSTEMS_MAX 2
-//#define DFS_FILESYSTEM_TYPES_MAX 2
-//#define DFS_FD_MAX 16
+#define RT_USING_DFS
+#define DFS_USING_WORKDIR
+#define DFS_FILESYSTEMS_MAX 2
+#define DFS_FILESYSTEM_TYPES_MAX 2
+#define DFS_FD_MAX 16
 //#define RT_USING_DFS_DEVFS
-//#define RT_USING_DFS_ROMFS
+#define RT_USING_DFS_ROMFS
 
 /* Device Drivers */
 
@@ -101,7 +101,9 @@
 //#define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
-//#define RT_USING_SPI
+
+
+#define RT_USING_SPI
 //#define RT_USING_SFUD
 //#define RT_SFUD_USING_SFDP
 //#define RT_SFUD_USING_FLASH_INFO_TABLE
@@ -260,8 +262,8 @@
 #define BSP_USING_GPIO
 #define BSP_USING_UART
 #define BSP_USING_UART1
-
 #define BSP_USING_SPI3
+
 /* Board extended module Drivers */
 
 

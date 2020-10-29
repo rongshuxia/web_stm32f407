@@ -376,7 +376,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER, STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\libraries\STM32F4xx_HAL_Driver\Inc;..\libraries\STM32F4xx_HAL_Driver\Inc\Legacy;..\libraries\STM32F4xx_HAL_Driver;..\os\include;..\os\include\libc;..\bsp;..\components\finsh;..\CMSIS;..\components\drivers\include;..\components\drivers\include\drivers;..\components\drivers\include\ipc;..\libraries\HAL_Drivers;..\libraries\HAL_Drivers\drv_flash;..\libraries\HAL_Drivers\config\f4;..\components\libc\compilers\armlibc;..\components\libc\compilers\armlibc\sys</IncludePath>
+              <IncludePath>..\libraries\STM32F4xx_HAL_Driver\Inc;..\libraries\STM32F4xx_HAL_Driver\Inc\Legacy;..\libraries\STM32F4xx_HAL_Driver;..\os\include;..\os\include\libc;..\bsp;..\components\finsh;..\CMSIS;..\components\drivers\include;..\components\drivers\include\drivers;..\components\drivers\include\ipc;..\libraries\HAL_Drivers;..\libraries\HAL_Drivers\drv_flash;..\libraries\HAL_Drivers\config\f4;..\components\libc\compilers\armlibc;..\components\libc\compilers\armlibc\sys;..\components\drivers\spi;..\components\dfs\include;..\components\dfs\filesystems\devfs;..\components\dfs\filesystems\romfs</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -485,6 +485,21 @@
               <FileType>1</FileType>
               <FilePath>..\components\drivers\src\dataqueue.c</FilePath>
             </File>
+            <File>
+              <FileName>spi_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\components\drivers\spi\spi_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi_dev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\components\drivers\spi\spi_dev.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi_flash_sst25vfxx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\components\drivers\spi\spi_flash_sst25vfxx.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -589,6 +604,46 @@
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\CMSIS\system_stm32f4xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Filesystem</GroupName>
+          <Files>
+            <File>
+              <FileName>dfs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\components\dfs\src\dfs.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_file.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\components\dfs\src\dfs_file.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_fs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\components\dfs\src\dfs_fs.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_posix.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\components\dfs\src\dfs_posix.c</FilePath>
+            </File>
+            <File>
+              <FileName>devfs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\components\dfs\filesystems\devfs\devfs.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_romfs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\components\dfs\filesystems\romfs\dfs_romfs.c</FilePath>
+            </File>
+            <File>
+              <FileName>romfs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\components\dfs\filesystems\romfs\romfs.c</FilePath>
             </File>
           </Files>
         </Group>

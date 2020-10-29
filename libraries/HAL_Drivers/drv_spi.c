@@ -863,10 +863,18 @@ static void stm32_get_dma_info(void)
 
 int rt_hw_spi_init(void)
 {
-    stm32_get_dma_info();
-    return rt_hw_spi_bus_init();
+  stm32_get_dma_info();
+  return rt_hw_spi_bus_init();
+	
 }
 INIT_BOARD_EXPORT(rt_hw_spi_init);
+
+int rt_hw_spi_flash_init(void)
+{
+	__HAL_RCC_GPIOC_CLK_ENABLE();
+	rt_hw_spi_device_attach("spi3", "spi30", GPIOC, GPIO_PIN_2);
+}
+INIT_PREV_EXPORT(rt_hw_spi_flash_init);
 
 #endif /* BSP_USING_SPI1 || BSP_USING_SPI2 || BSP_USING_SPI3 || BSP_USING_SPI4 || BSP_USING_SPI5 */
 #endif /* RT_USING_SPI */
